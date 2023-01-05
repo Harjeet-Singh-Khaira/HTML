@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "article article ads"
+            "section section ads"
+            "aside aside aside"
+            "footer footer footer";
+            grid-template-columns:30% 40% 30%;
+            grid-template-rows: 5% 5% 60% 60% 40% 5%;
+            grid-gap: 10px;
+            height: 1020px;
+            margin: 0;
+        }
+        header,footer,article,ads,nav,div,aside,section{
+            padding: 20px;
+            background: gold;
+            text-align: center;
+        }
+        #pageheader{
+            grid-area: header;
+        }
+        #pagenav{
+            grid-area: nav;
+        }
+        #pagearticle{
+            grid-area: article;
+        }
+        #pagesection{
+            grid-area: section;
+        }
+        #pageads{
+            grid-area: ads;
+        }
+        #pagefooter{
+            grid-area: footer;
+        }
+        #pageaside{
+            grid-area: aside;
+        }
+    </style>
+</head>
+<body>
+    <header id="pageheader">header</header>
+    <nav id="pagenav">nav</nav>
+    <article id="pagearticle">article</article>
+    <section id="pagesection">section</section>
+    <ads id="pageads">ads</ads>
+    <aside id="pageaside">aside</aside>
+    <footer id="pagefooter">footer</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>javascript</title>
+</head>
+<body>
+    <p id="p0"></p>
+    <p id="p"></p>
+    <p id="pa"></p>
+    <p id="pa1"></p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <script>
+        var x=5,y=10;
+        x++;
+        document.getElementById('p0').innerHTML=x;
+        x--;
+        document.getElementById('p').innerHTML=x;
+        ++x;
+        document.getElementById('pa').innerHTML=x;
+        --x;
+        document.getElementById('pa1').innerHTML=x;
+        x=y;
+        document.getElementById('p1').innerHTML=x;
+        x+=y;
+        document.getElementById('p2').innerHTML=x;
+        x-=y;
+        document.getElementById('p3').innerHTML=x;
+        x*=y;
+        document.getElementById('p4').innerHTML=x;
+        x/=y;
+        document.getElementById('p5').innerHTML=x;
+        x%=y;
+        document.getElementById('p6').innerHTML=x;
+    </script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rail Ways</title>
+    <style>
+        body{
+            border: 20px #146696 solid;
+            border-top: none;
+            background-color: rgb(252, 253, 253);
+        }
+        #top{
+            background-color: #146696;
+            font-size: larger;
+            text-align: center;  
+        }
+        #heading{
+            height: 200px;
+        }
+        #img1{
+            height: 160px;
+            float: left;
+            margin-left: 50px;
+        }
+        #img3{
+            height: 180px;
+            float: right;
+            margin-right: 100px;
+        }
+        #img2{
+            height: 180px;
+            float: right;
+            margin-right: 100px;
+        }
+        #navigation{
+            background-color: #146696;
+            font-size: larger;    
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 50px;
+        }
+        th,td{
+            border: 2px solid black;
+            border-style: ridge;
+            border-spacing: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 7px;
+        }
+        #train{
+            float: left;
+            margin-left: 33px;
+        }
+        #prime{
+            float: right;
+            height: 300px;
+            width: 300px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 36px;
+        }
+        #ministry{
+            float: right;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-right: 32px;
+            background-color: rgb(251, 253, 255);
+            box-shadow: 2px 2px 2px 2px grey;
+        }
+        .img5{
+            height: 300px;
+            width: 300px;
+        }
+        .name{
+            color: black;
+            text-align: center;
+        }
+        #links{
+            float: right;
+            margin-right: 120px;
+            margin-top: 30px;
+            border: 2px black hidden;
+            width: 1000px;
+            text-align: right;
+        }
+        #news{
+            text-align: center;
+            font-size: xx-large;
+        }
+        .blink{
+            font-weight: bolder;
+            padding-left: 150px;
+            padding-right: 50px;
+        }
+        #maincontent{
+            float: left;
+            width: 1000px;
+            height: 1080px;
+            margin-left: 33px;
+            border-radius: 8px;
+            background-color: rgba(242, 250, 250, 0.563);
+        }
+        #coust{
+            background-image: url(data:image/jpeg;base64,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);
+            background-repeat: no-repeat;
+            background-size: 80px;
+            background-position: right;
+        }
+        #table2{
+            width: 410px;
+            margin-left: 525px;
+            margin-bottom: 200px;
+            height: 300px;
+            background-color: rgb(248, 248, 249);
+            box-shadow: 2px 2px 2px 2px grey;
+            border-radius: 8px;
+        }
+        .blink:hover{
+            background-color: rgb(237, 249, 8);
+        }
+        #th:hover{
+            background-color: rgb(42, 75, 126);
+        }
+        #skip:hover{
+            background-color: rgb(42, 75, 126);
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <a href="#maincontent" id="skip" style="color: white; text-decoration: none;">Skip to main content &nbsp;</a>
+        <a href="#navigation" id="skip" style="color: white;text-decoration: none;">Skip to navigation</a>
+    </div>
+    <header>
+        <div id="heading">
+            <img id="img1" height="400px" src=https://t3.ftcdn.net/jpg/04/32/54/24/240_F_432542454_kfzQHjWPgdi4sx9EfXqOLPzSXFiJBf8l.jpg alt="Railways"/>
+            <img id="img2" src="data:image/jpeg;base64,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" alt="Picture"/>
+        </div>
+    </header>
+    <nav>
+        <div id="navigation">
+            <table>
+                <tr>
+                    <th id="th"><a href="" target="_blank" style="color: white;text-decoration: none;">Ticket Booking</a></th>
+                    <th id="th"><a href="http://127.0.0.1:5500/project1.html" target="_blank" style="color: white;text-decoration: none;">PNR Status</a></th>
+                    <th id="th"><a href="" target="_blank" style="color: white;text-decoration: none;">Catering</a></th>
+                    <th id="th"><a href="http://127.0.0.1:5500/project2.html" target="_blank" style="color: white;text-decoration: none;">Holiday Packages</a></th>
+                    <th id="th"><a href="http://127.0.0.1:5500/project3.html" target="_blank" style="color: white;text-decoration: none; ">Contact us</a></th>
+                </tr>
+            </table>
+        </div>
+    </nav>
+    <div id="train">
+        <img height="400px" width="1000px" src="https://img.freepik.com/premium-photo/indian-train_1498-1.jpg?size=626&ext=jpg&ga=GA1.2.1510052086.1671032861" alt="train"/>
+    </div>
+    <aside>
+        <div id="prime">
+            <img style="padding: 20px;" class="img5" src="https://indianrailways.gov.in/PM.png" alt="Prime Minister"/>
+        </div>
+        <div id="ministry">
+            <a href="" target="_blank">
+                <img src="https://indianrailways.gov.in/min1.jpg" alt="" class="img5">
+                <p class="name">Shri Ashwini Vaishnaw</p>
+                <p class="name">Minister of Railways</p>
+            </a>
+            <a href="" target="_blank">
+                <img src="https://indianrailways.gov.in/min2.jpg" alt="Minister of Railways" class="img5">
+                <p class="name">Shri Raosaheb Patil Danve</p>
+                <p class="name">Minister of State in the Ministry of Railways</p>
+            </a>
+            <a href="" target="_blank">
+                <img src="https://indianrailways.gov.in/min3.jpg" alt="" class="img5">
+                <p class="name">Smt  Darshana Jardosh</p>
+                <p class="name">Minister of State in the Ministry of Railways</p>
+            </a>
+        </div>
+    </aside>
+    <div id="links">
+        <a href="">
+            <img src="https://indianrailways.gov.in/Facebook_Logo_sml.jpg" alt="facebook">
+        </a>
+        <a href="">
+            <img src="https://indianrailways.gov.in/Twitter_logo_blue_sml.jpg" alt="twitter">
+        </a>
+        <a href="">
+            <img src="https://indianrailways.gov.in/youtube.jpg" alt="youtube">
+        </a>
+    </div>
+    <section>
+        <div id="maincontent">
+            <h1 id="news" style="background-color: lightgrey;">Latest Headlines</h1>
+            <div class="content">
+                <center>
+                <em>
+                <p class="blink" size="3" width="20" height="22" face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>
+                        Lorem ipsum dolor sit. ipsum dolor sit amet. ipsum dolor sit amet consectetur adipisicing elit. Autem, soluta!&nbsp;&nbsp;<img src="https://indianrailways.gov.in/images/new.gif"></a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22"  face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ut porro nobis a facilis esse quae iusto. Qui, praesentium id. &nbsp;&nbsp;<img src="https://indianrailways.gov.in/images/new.gif"></a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22"  face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, velit. Accusantium soluta amet quaerat minima, ducimus odio repellat!&nbsp;&nbsp;<img src="https://indianrailways.gov.in/images/new.gif"></a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22" face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo aut officia corrupti inventore sequi, voluptate ad. &nbsp;&nbsp;<img src="https://indianrailways.gov.in/images/new.gif"></a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22" face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dignissimos odio id voluptates adipisci!&nbsp;&nbsp;<img src="https://indianrailways.gov.in/images/new.gif"></a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22" face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, fugiat? &nbsp;&nbsp;<img src="https://indianrailways.gov.in/images/new.gif"></a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22" face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis minus ut sint rerum eius aut ducimus consectetur id. Impedit, nesciunt.&nbsp;&nbsp;<img src="https://indianrailways.gov.in/images/new.gif"></a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22" face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequatur nostrum magnam in harum placeat?</a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22" face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aliquam sit eum perspiciatis?</a>
+                </p>
+                <br>
+                <p class="blink" size="3" width="20" height="22" face="Arial Black">
+                    <a style="color: red;text-decoration: none;" href="" target="_blank"><span style="color: #146696; font-style:italic; font-weight: 900;">>></span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi modi magnam tenetur?</a>
+                </p>
+                <br>
+            </em>
+            </center>
+            </div>
+            <div>
+                <img src="https://tpc.googlesyndication.com/simgad/15256086411430773400?" alt="image" style="padding:20px;padding-top: 100px;">
+            </div>
+        </div>
+    </section>
+    <div>
+        <center>
+        <table id="table2">
+            <tr>
+                <th>
+                    <h3 style="font-size: xx-large; padding: 10px;" id="coust">
+                        Customer Service
+                    </h3>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                        <a href="">SMS(related to passenger information)-139</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <a href="">CALL-139</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        Give us your Feedback and Suggestions through SMS at +91-9838...... This will help us to render better services.
+                </td>
+            </tr>
+        </table>
+        </center>
+    </div>
+</body>
+</html>

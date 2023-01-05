@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+    <style>
+        body{
+            background-image: url(https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        div{
+            color: white;
+            font-size: xx-large;
+            text-align: center;
+            padding-top: 80px;
+        }
+        form{
+            border: 3px white solid;
+            border-radius: 7px;
+            width: 700px;
+            margin-top: 50px;
+        }
+        p{
+            color: white;
+            font-size: large;
+        }
+        input{
+            width: 200px;
+        }
+    </style>
+</head>
+<body><div>Registration Form</div>
+    <form action="/signup" method="post">
+        <p>
+            
+        </p>
+        <p>
+            <label>Username</label>
+            <input type="text" placeholder="Username" required>
+        </p>
+        <p>
+            <label>Date Of Birth</label>
+            <input type="date">
+        </p>
+        <p>
+            <label>Birth Certificate</label>
+            <input type="file">
+        </p>
+        <p>
+            <label>Email</label>
+            <input type="email" placeholder="email">
+        </p>
+        <p>
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Phone Number">
+        </p>
+        <p>
+            <label>Password</label>
+            <input type="password" placeholder="Password">
+        </p>
+        <p>
+            <label>Confirm Your Password</label>
+            <input type="password" placeholder="Confirm Password">
+        </p>
+        <p>
+            <label>Country</label>
+            <select>
+                <option>Canada</option>
+                <option>India</option>
+                <option>Italy</option>
+                <option>Russia</option>
+                <option>Japan</option>
+                <option>United Kingdoms</option>
+                <option>United States</option>
+            </select>
+        </p>
+        <p>
+            <label>Languages</label>
+            <input type="checkbox" name="languages" value="English">I know English
+            <input type="checkbox" value="french">I know french
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" value="terms">
+                I agree to the <a href="/terms">terms and conditions</a>
+            </label>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</body>
+</html>

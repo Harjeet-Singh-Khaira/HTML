@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        div{
+            border: 5px white solid;
+            width: 600px;
+            background-color: aqua;
+            padding: 20px;
+            font-size: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        input[type=text], input[type=password], input[type=submit]{
+            width: 100%;
+            height: 50px;
+        }
+        input[type=submit], input[type=button]{
+            background-color: rgb(183, 137, 226);
+        }
+        input::placeholder{
+            size: 15px;
+            padding-left: 10px;
+        }
+        input[type=submit] :hover{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Student Login Form</h1>
+    <form action="/login">
+        <p>
+            <label>Username</label>
+        </p>
+        <p>
+            <input type="text" placeholder="Username" required>
+        </p>
+        <p>
+            <label>Password</label>
+        </p>
+        <p>
+            <input type="password" placeholder="Password" required>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+        <p>
+            <input type="checkbox"><label>Remember me</label>
+            <input type="button" value="Cancel">Forgot password?
+        </p>
+    </form>
+    </div>
+</body>
+</html>

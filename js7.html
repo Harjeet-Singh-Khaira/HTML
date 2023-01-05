@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>loops</title>
+</head>
+<body>
+    <h1>for loop</h1>
+    <p id="p0"></p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="print"></p>
+    <script>
+        for (let i = 0; i < 5; i++) 
+        {
+            document.getElementById('p'+i).innerHTML=i;    
+        }
+        for (let i = 0; i < 5; i++) 
+        {
+            alert(i);   
+        }
+        text=''
+        for (let i=0; i < 6; i++)
+        {
+            text += i+'<br>';
+            document.getElementById('print').innerHTML=text;
+        }
+    </script>
+    <h2>while loop</h2>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <script>
+        var i=5;
+        while (i<10)
+        {
+            document.getElementById("p" +i).innerHTML = i;
+            i++;
+        }
+    </script>
+</body>
+</html>
